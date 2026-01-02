@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
          http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id = "Monday" class ="java.time.LocalDate" factory-method="now"/>
-<bean id = "price" class="com.example.demo.DiscountCalculator">
-	<property name= "currentdate" ref="Monday"></property>
-	<property name="price" value="10000"></property>
-</bean>
+    <!-- LocalDate bean using factory-method -->
+    <bean id="currentDate"
+          class="java.time.LocalDate"
+          factory-method="now"/>
 
+    <!-- DiscountCalculator bean with setter injection -->
+    <bean id="price"
+          class="com.example.demo.DiscountCalculator">
+
+        <property name="currentdate" ref="currentDate"/>
+        <property name="price" value="10000"/>
+
+    </bean>
 
 </beans>
