@@ -1,0 +1,14 @@
+package com.shiva.Class;
+
+import com.shiva.Interface.Notification;
+
+public class PushNotification implements Notification
+{
+
+	@Override
+	public String Notification() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

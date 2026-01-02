@@ -1,0 +1,17 @@
+package com.shiva.Interface.Class;
+
+import org.springframework.stereotype.Component;
+
+import com.shiva.Interface.Notification;
+
+@Component("email")
+public class EmailNotification implements Notification
+{
+
+	@Override
+	public String Notification() {
+		
+	return "Email Notification Sent Successfully.!!";
+	}
+	
+}

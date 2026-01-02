@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- provider instance -->
+    <bean id="dateProvider" class="com.example.demo.DateProvider" />
+
+    <!-- bean that is the LocalDate produced by dateProvider.getCurrentDate() -->
+    <bean id="currentDate" factory-bean="dateProvider" factory-method="getCurrentDate" />
+
+    <!-- single discountCalculator bean using setter injection -->
+    <bean id="discountCalculator" class="com.example.demo.DiscountCalculator">
+        <property name="currentDate" ref="currentDate" />
+        <property name="price" value="100" />
+    </bean>
+
+</beans>

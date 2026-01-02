@@ -1,0 +1,48 @@
+package com.shiva.Interface.Bean;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.shiva.Interface.Notification;
+
+@Service
+public class NotificationService 
+{
+	
+	private final Notification notification;
+	
+@Autowired
+public NotificationService(@Qualifier("sms")Notification notification) 
+	{
+	super();
+	this.notification = notification;
+    }
+
+
+public void NotificationSender()
+		{
+			IO.println(	notification.Notification());
+		}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	//@Autowired
+//	@Qualifier("sms")
+//	Notification notification;
+	
+	
+
+	
+	
+	
+	

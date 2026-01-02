@@ -1,0 +1,5 @@
+package com.shiva.Interface;
+
+public interface Notification {
+
+}
