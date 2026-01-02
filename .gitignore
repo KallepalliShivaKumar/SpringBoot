@@ -1,0 +1,12 @@
+# Spring Tool / Eclipse
+.metadata/
+
+# Maven
+target/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
