@@ -50,4 +50,4 @@ By practicing these projects, I learned:
 Note:
 
 This repository is created for learning and practice.
-The projects are not production-ready.
+ 
